@@ -1,0 +1,16 @@
+<.connection_status>
+  Re-establishing connection...
+</.connection_status>
+
+<.live_component module={Components.Toasts} id="toast" current_user={@current_user} />
+<.live_component module={Components.Modal} id="modal" current_user={@current_user} />
+
+<%= @inner_content %>
+
+<script
+  defer
+  phx-track-static
+  type="text/javascript"
+  src={Routes.static_path(@socket, "/assets/app.js")}
+>
+</script>
