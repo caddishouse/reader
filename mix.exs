@@ -69,7 +69,7 @@ defmodule Caddishouse.MixProject do
       {:waffle_ecto, "~> 0.0"},
 
       # Minio
-      {:ex_aws, "~> 2.3.3"},
+      {:ex_aws, "~> 2.4.0"},
       {:ex_aws_s3, "~> 2.0"},
       {:hackney, "~> 1.9"},
       {:sweet_xml, "~> 0.6"},
