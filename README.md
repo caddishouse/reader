@@ -1,5 +1,5 @@
 # Caddishouse
-Caddishouse is a web-based document reader. It connects to your cloud-based storage accounts and lets you import documents to read.
+Caddishouse is a web-based document reader. It connects to your cloud-based storage accounts and lets you import documents to read. You can use it by accessing https://www.caddishouse.com OR set it up locally.
 
 It does the following:
 * Access your documents in any number of cloud-based storage accounts quickly.
@@ -12,6 +12,9 @@ In order to support this last requirement, it gives up the following features wh
 * Annotations are not supported
 
 See ROADMAP for planned features.
+
+## Screenshot
+![image](https://user-images.githubusercontent.com/17934/190648629-54172cb9-16b3-47be-a711-4b80025f834c.png)
 
 ## Quick Start
 
