@@ -94,7 +94,10 @@ defmodule CaddishouseWeb.Live.Components.Toolbar do
             class="flex flex-col text-center items-center"
             id="toolbar-toggle-outline"
           >
-            <.icon name={:clipboard_document_list} class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6" />
+            <.icon
+              name={:clipboard_document_list}
+              class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6"
+            />
             <span class="font-mono">
               ToC
             </span>
@@ -110,7 +113,10 @@ defmodule CaddishouseWeb.Live.Components.Toolbar do
             class="flex flex-col text-center items-center"
             id="toolbar-toggle-size"
           >
-            <.icon name={:arrows_pointing_out} class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6" />
+            <.icon
+              name={:arrows_pointing_out}
+              class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6"
+            />
             <span class="font-mono">
               Size
             </span>

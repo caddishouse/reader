@@ -136,23 +136,6 @@ defmodule CaddishouseWeb.Live.Components.CommandPalette do
     """
   end
 
-  defp footer(assigns) do
-    ~H"""
-    <div class="flex flex-wrap items-center bg-gray-50 py-2.5 px-4 text-xs text-gray-700">
-      Type
-      <kbd class="mx-1 flex h-5 w-5 items-center justify-center rounded border bg-white font-semibold sm:mx-2 border-gray-400 text-gray-900">
-        #
-      </kbd>
-      <span class="sm:hidden">for projects,</span><span class="hidden sm:inline">to access projects,</span><kbd class="mx-1 flex h-5 w-5 items-center justify-center rounded border bg-white font-semibold sm:mx-2 border-gray-400 text-gray-900">&gt;</kbd>
-      for documents, and
-      <kbd class="mx-1 flex h-5 w-5 items-center justify-center rounded border bg-white font-semibold sm:mx-2 border-gray-400 text-gray-900">
-        ?
-      </kbd>
-      for help.
-    </div>
-    """
-  end
-
   defp results(assigns) do
     ~H"""
     <ul class="max-h-80 scroll-py-10 scroll-py-10 scroll-pb-2 scroll-pb-2 space-y-4 overflow-y-auto p-4 pb-2">

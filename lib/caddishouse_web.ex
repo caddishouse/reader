@@ -81,7 +81,7 @@ defmodule CaddishouseWeb do
       # Import basic rendering functionality (render, render_layout, etc)
       use Phoenix.HTML
       import Phoenix.View
-      import Phoenix.LiveView.Helpers
+      import Phoenix.Component
       use Phoenix.HTML
       import CaddishouseWeb.Live.Helpers
 

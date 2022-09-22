@@ -82,7 +82,7 @@ defmodule CaddishouseWeb.Live.Components.Modal do
             aria-hidden="true"
           >
           </div>
-          <.focus_wrap id={"#{@id}-focus-wrap"} content={"##{@id}-container"}>
+          <.focus_wrap id={"#{@id}-focus-wrap"}>
             <div
               class="fixed inset-0 z-40 overflow-y-auto p-4 sm:p-6 md:p-20"
               phx-target={@myself}

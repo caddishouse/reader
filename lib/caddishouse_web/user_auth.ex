@@ -3,7 +3,7 @@ defmodule CaddishouseWeb.UserAuth do
   import Plug.Conn
   import Phoenix.Controller
 
-  alias Phoenix.LiveView
+  alias Phoenix.Component
 
   alias Caddishouse.Accounts.{UserTokens, Users}
 
@@ -11,10 +11,10 @@ defmodule CaddishouseWeb.UserAuth do
     case session do
       %{"user_token" => token} ->
         {:cont,
-         LiveView.assign_new(socket, :current_user, fn -> Users.get_by_session_token(token) end)}
+         Component.assign_new(socket, :current_user, fn -> Users.get_by_session_token(token) end)}
 
       %{} ->
-        {:cont, LiveView.assign(socket, :current_user, nil)}
+        {:cont, Component.assign(socket, :current_user, nil)}
     end
   end
 

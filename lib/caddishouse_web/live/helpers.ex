@@ -26,8 +26,7 @@ defmodule CaddishouseWeb.Live.Helpers do
     WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
   """
 
-  import Phoenix.LiveView
-  import Phoenix.LiveView.Helpers
+  import Phoenix.Component
 
   alias Phoenix.LiveView.JS
 
@@ -337,51 +336,6 @@ defmodule CaddishouseWeb.Live.Helpers do
         </div>
       <% end %>
     </div>
-    """
-  end
-
-  def button(%{patch: _} = assigns) do
-    assigns = assign_new(assigns, :primary, fn -> false end)
-
-    ~H"""
-    <%= if @primary do %>
-      <%= live_patch [to: @patch, class: "order-0 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:order-1 sm:ml-3"] ++
-        assigns_to_attributes(assigns, [:primary, :patch]) do %>
-        <%= render_slot(@inner_block) %>
-      <% end %>
-    <% else %>
-      <%= live_patch [to: @patch, class: "order-1 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:order-0 sm:ml-0 lg:ml-3"] ++
-        assigns_to_attributes(assigns, [:primary, :patch]) do %>
-        <%= render_slot(@inner_block) %>
-      <% end %>
-    <% end %>
-    """
-  end
-
-  def button(%{} = assigns) do
-    assigns =
-      assigns
-      |> assign_new(:primary, fn -> false end)
-      |> assign(:rest, assigns_to_attributes(assigns))
-
-    ~H"""
-    <%= if @primary do %>
-      <button
-        type="button"
-        class="order-0 inline-flex items-center px-4 py-2 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:order-1 sm:ml-3"
-        {@rest}
-      >
-        <%= render_slot(@inner_block) %>
-      </button>
-    <% else %>
-      <button
-        type="button"
-        class="order-1 inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 sm:order-0 sm:ml-0 lg:ml-3"
-        {@rest}
-      >
-        <%= render_slot(@inner_block) %>
-      </button>
-    <% end %>
     """
   end
 
