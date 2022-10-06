@@ -76,7 +76,7 @@ defmodule CaddishouseWeb.Live.Components.Toolbar do
           phx-click="show-command-palette"
           phx-target={@myself}
         >
-          <.icon name={:document_duplicate} class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6" />
+          <.icon name={:document} class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6" />
           <span class="font-mono">
             Docs
           </span>
