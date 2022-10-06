@@ -115,16 +115,12 @@ defmodule CaddishouseWeb.Live.Helpers do
   def icon(assigns) do
     assigns =
       assigns
-      |> assign_new(:outlined, fn -> false end)
+      |> assign_new(:solid, fn -> !Map.has_key?(assigns, :outlined) end)
       |> assign_new(:class, fn -> "w-4 h-4 inline-block" end)
       |> assign_new(:"aria-hidden", fn -> !Map.has_key?(assigns, :"aria-label") end)
 
     ~H"""
-    <%= if @outlined do %>
-      <%= apply(Heroicons.Outline, @name, [assigns_to_attributes(assigns, [:outlined, :name])]) %>
-    <% else %>
-      <%= apply(Heroicons.Solid, @name, [assigns_to_attributes(assigns, [:outlined, :name])]) %>
-    <% end %>
+    <%= apply(Heroicons, @name, [assigns_to_attributes(assigns, [:solid, :name, :mini])]) %>
     """
   end
 

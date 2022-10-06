@@ -9,9 +9,7 @@ defmodule Caddishouse.Storage do
 
   defp storage_api(), do: Application.get_env(:caddishouse, :storage_api, Caddishouse.Storage.S3)
 
-  # TODO just pass path?
   def delete(%Media{} = media) do
-    IO.inspect("Attemping to deleeeeeeeeeete")
     storage_api().delete("uploads", "/user/#{media.user_id}/media/#{media.id}/#{media.name}")
   end
 
