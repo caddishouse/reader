@@ -10,6 +10,15 @@ defmodule Caddishouse.OAuth2.Providers do
     _search(google_api(), user, oauth_user, query)
   end
 
+  def download(
+        %User{} = user,
+        %OAuthUser{provider: :google} = oauth_user,
+        file_id,
+        file_destination
+      ) do
+    _download(google_api(), user, oauth_user, file_id, file_destination)
+  end
+
   defp _search(api, %User{} = user, %OAuthUser{} = oauth_user, query, retries \\ 1) do
     connection = api.connect(oauth_user.access_token)
     request = api.list_files(connection, query, types: [@pdf_mimetype])
@@ -42,15 +51,6 @@ defmodule Caddishouse.OAuth2.Providers do
 
         {:error, error}
     end
-  end
-
-  def download(
-        %User{} = user,
-        %OAuthUser{provider: :google} = oauth_user,
-        file_id,
-        file_destination
-      ) do
-    _download(google_api(), user, oauth_user, file_id, file_destination)
   end
 
   defp _download(
