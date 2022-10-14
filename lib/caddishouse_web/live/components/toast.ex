@@ -110,7 +110,7 @@ defmodule CaddishouseWeb.Live.Components.Toasts do
       phx-hook="Flash"
     >
       <div class="flex justify-between items-center space-x-3 text-green-700">
-        <.icon name={:check_circle} class="w-5 w-5" />
+        <.icon name="check-circle" class="w-5 w-5" />
         <p class="flex-1 text-sm font-medium" role="alert">
           <%= raw(@toast.content) %>
         </p>
@@ -118,7 +118,7 @@ defmodule CaddishouseWeb.Live.Components.Toasts do
           type="button"
           class="inline-flex bg-green-50 rounded-md p-1.5 text-green-500 hover:bg-green-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-green-50 focus:ring-green-600"
         >
-          <.icon name={:x} class="w-4 h-4" />
+          <.icon name="x-mark" class="w-4 h-4" />
         </button>
       </div>
     </div>
