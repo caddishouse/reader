@@ -76,7 +76,7 @@ defmodule CaddishouseWeb.Live.Components.Toolbar do
           phx-click="show-command-palette"
           phx-target={@myself}
         >
-          <.icon name={:document} class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6" />
+          <.icon name="document" class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6" />
           <span class="font-mono">
             Docs
           </span>
@@ -95,7 +95,7 @@ defmodule CaddishouseWeb.Live.Components.Toolbar do
             id="toolbar-toggle-outline"
           >
             <.icon
-              name={:clipboard_document_list}
+              name="clipboard-document-list"
               class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6"
             />
             <span class="font-mono">
@@ -113,10 +113,7 @@ defmodule CaddishouseWeb.Live.Components.Toolbar do
             class="flex flex-col text-center items-center"
             id="toolbar-toggle-size"
           >
-            <.icon
-              name={:arrows_pointing_out}
-              class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6"
-            />
+            <.icon name="arrows-pointing-out" class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6" />
             <span class="font-mono">
               Size
             </span>
@@ -144,7 +141,7 @@ defmodule CaddishouseWeb.Live.Components.Toolbar do
           phx-click="show-settings"
           phx-target={@myself}
         >
-          <.icon name={:user} class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6" />
+          <.icon name="user" class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6" />
           <span class="font-mono">
             User
           </span>
@@ -155,7 +152,7 @@ defmodule CaddishouseWeb.Live.Components.Toolbar do
           phx-click="show-about"
           phx-target={@myself}
         >
-          <.icon name={:information_circle} class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6" />
+          <.icon name="information-circle" class="group-hover:text-gray-500 flex-shrink-0 h-6 w-6" />
           <span class="font-mono">
             Info
           </span>

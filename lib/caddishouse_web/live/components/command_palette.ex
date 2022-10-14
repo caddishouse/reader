@@ -157,7 +157,7 @@ defmodule CaddishouseWeb.Live.Components.CommandPalette do
       data-result-id={@result.id}
       class="group flex cursor-default select-none items-center px-3 py-2"
     >
-      <.icon name={:document} outlined class="h-6 w-6 flex-none text-gray-900 text-opacity-40" />
+      <.icon name="document" outlined class="h-6 w-6 flex-none text-gray-900 text-opacity-40" />
       <a
         href={Routes.documents_show_path(@socket, :index, @result.id)}
         class="text-left ml-3 flex-auto truncate"
@@ -201,7 +201,7 @@ defmodule CaddishouseWeb.Live.Components.CommandPalette do
     <div class="relative">
       <.form :let={f} for={:search} phx-change="search" phx-target={@myself}>
         <.icon
-          name={:magnifying_glass_circle}
+          name="magnifying-glass-circle"
           class="pointer-events-none absolute top-3.5 left-4 h-5 w-5 text-gray-400"
         />
         <%= text_input(f, :query,
@@ -229,7 +229,7 @@ defmodule CaddishouseWeb.Live.Components.CommandPalette do
       <% :google -> %>
         <Components.Logos.google_drive class="h-5 h-5 flex-none" />
       <% _ -> %>
-        <.icon name={:document} outlined class="h-6 w-6 flex-none text-gray-900 text-opacity-40" />
+        <.icon name="document" outlined class="h-6 w-6 flex-none text-gray-900 text-opacity-40" />
     <% end %>
     """
   end
