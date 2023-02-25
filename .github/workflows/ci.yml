@@ -39,9 +39,6 @@ jobs:
         otp-version: ${{matrix.otp}}
         elixir-version: ${{matrix.elixir}}
     - uses: actions/checkout@v3
-      with:
-        ref: main # Check out main instead of the latest commit
-        fetch-depth: 0 # Checkout the whole branch
     - name: Cache deps
       id: cache-deps
       uses: actions/cache@v3
