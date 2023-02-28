@@ -97,12 +97,12 @@ defmodule CaddishouseWeb do
   end
 
   def verified_routes do
-  quote do
-  use Phoenix.VerifiedRoutes,
-  endpoint: CaddishouseWeb.Endpoint,
-  router: CaddishouseWeb.Router,
-  statics: CaddishouseWeb.static_paths()
-  end
+    quote do
+      use Phoenix.VerifiedRoutes,
+        endpoint: CaddishouseWeb.Endpoint,
+        router: CaddishouseWeb.Router,
+        statics: CaddishouseWeb.static_paths()
+    end
   end
 
   @doc """
