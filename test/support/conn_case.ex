@@ -24,6 +24,7 @@ defmodule CaddishouseWeb.ConnCase do
       import Phoenix.ConnTest
       import CaddishouseWeb.ConnCase
       import Caddishouse.Tests.Factory
+      use CaddishouseWeb, :verified_routes
 
       alias CaddishouseWeb.Router.Helpers, as: Routes
 

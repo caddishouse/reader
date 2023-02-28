@@ -199,7 +199,7 @@ defmodule CaddishouseWeb.Live.Components.CommandPalette do
   defp search_input(assigns) do
     ~H"""
     <div class="relative">
-      <.form :let={f} for={:search} phx-change="search" phx-target={@myself}>
+      <.form :let={f} for={%{}} as={:search} phx-change="search" phx-target={@myself}>
         <.icon
           name="magnifying-glass-circle"
           class="pointer-events-none absolute top-3.5 left-4 h-5 w-5 text-gray-400"

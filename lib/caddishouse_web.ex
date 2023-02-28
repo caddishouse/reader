@@ -16,6 +16,7 @@ defmodule CaddishouseWeb do
   below. Instead, define any helper function in modules
   and import those modules here.
   """
+  def static_paths, do: ~w(assets fonts images icons robots.txt)
 
   def controller do
     quote do
@@ -24,6 +25,7 @@ defmodule CaddishouseWeb do
       import Plug.Conn
       import CaddishouseWeb.Gettext
       alias CaddishouseWeb.Router.Helpers, as: Routes
+      unquote(verified_routes())
     end
   end
 
@@ -39,6 +41,7 @@ defmodule CaddishouseWeb do
 
       # Include shared imports and aliases for views
       unquote(view_helpers())
+      unquote(verified_routes())
     end
   end
 
@@ -91,6 +94,15 @@ defmodule CaddishouseWeb do
       alias Phoenix.LiveView.JS
       alias CaddishouseWeb.Live.Components
     end
+  end
+
+  def verified_routes do
+  quote do
+  use Phoenix.VerifiedRoutes,
+  endpoint: CaddishouseWeb.Endpoint,
+  router: CaddishouseWeb.Router,
+  statics: CaddishouseWeb.static_paths()
+  end
   end
 
   @doc """
