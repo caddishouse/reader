@@ -71,3 +71,6 @@ See Configuration.
 ## Gotchas
 ### When committing, I get an error that there are dependencies that are out of sync.
 Run the following: `mix git_hooks.install`
+
+# Credits
+Primarily developed by Alex Fraiha (Fraih001) and aef-.
