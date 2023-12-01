@@ -83,7 +83,7 @@ defmodule Caddishouse.MixProject do
       {:git_hooks, "~> 0.7.2", only: [:dev], runtime: false},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:ex_machina, "~> 2.7.0", only: :test},
-      {:mox, "~> 1.0.2", only: :test}
+      {:mox, "~> 1.1.0", only: :test}
     ]
   end
 
