@@ -52,7 +52,7 @@ defmodule Caddishouse.MixProject do
       {:ueberauth, "~> 0.7", override: true},
       {:ueberauth_google, "~> 0.10"},
       {:ueberauth_microsoft, "~> 0.15"},
-      {:google_api_drive, "~> 0.25.1"},
+      {:google_api_drive, "~> 0.29.2"},
       {:finch, "~> 0.18.0"},
       {:castore, "~> 0.1"},
       {:timex, "~> 3.7.8"},
