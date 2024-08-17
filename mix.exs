@@ -44,7 +44,7 @@ defmodule Caddishouse.MixProject do
       {:phoenix_html, "~> 3.2"},
       {:phoenix_view, "~> 2.0"},
       {:phoenix_live_view, "~> 0.18"},
-      {:phoenix_live_reload, "~> 1.4.0"},
+      {:phoenix_live_reload, "~> 1.5.3"},
       {:phoenix_live_dashboard, "~> 0.7"},
       {:ex_heroicons, "~> 2.0.0"},
       {:ecto_sql, "~> 3.6"},
